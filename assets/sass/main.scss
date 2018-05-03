@@ -1,6 +1,7 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
+@import 'extra/nick-logo';
 @import url('font-awesome.min.css');
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 
@@ -950,7 +951,8 @@
 		@include padding(9em, 0, (0,0,_size(element-margin),0));
 		@include dark(#4686a0);
 		background-attachment:	fixed,							fixed,							fixed;
-		background-image:		url('images/overlay2.png'),		url('images/overlay3.svg'),		linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 30%, _palette(accent6-alt));
+		// background-image:		url('images/overlay2.png'),		url('images/overlay3.svg'),		linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 30%, _palette(accent6-alt));
+		background-color: #222;
 		background-position:	top left,						center center,					center center;
 		background-size:		auto,							cover,							cover;
 		overflow: hidden;
@@ -969,15 +971,15 @@
 			margin: (_size(element-margin) * 1.25) 0 0 0;
 			position: relative;
 
-			&:after {
-				background: _palette(dark, border);
-				content: '';
-				height: 100vh;
-				left: 50%;
-				position: absolute;
-				top: 100%;
-				width: 1px;
-			}
+			// &:after {
+			// 	background: _palette(dark, border);
+			// 	content: '';
+			// 	height: 100vh;
+			// 	left: 50%;
+			// 	position: absolute;
+			// 	top: 100%;
+			// 	width: 1px;
+			// }
 		}
 
 		.inner {
