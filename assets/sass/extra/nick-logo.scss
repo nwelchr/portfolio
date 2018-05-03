@@ -136,7 +136,7 @@ $A: 5s; // accelerate
 }
 
 .spin .down-arrow {
-  animation: button-rotate 1s cubic-bezier(.36,-0.2,.74,1.27) forwards;
+  animation: button-rotate 1s cubic-bezier(.7,-0.55,.38,2) forwards;
   animation-play-state: running;
 }
 
