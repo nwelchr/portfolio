@@ -1,4 +1,22 @@
-$D: 300px; // size control // diameter
+@import "../libs/functions";
+
+$D: 450px; // size control // diameter
+
+@media (max-width: 1140px) {
+  $D: 400px;
+}
+@media (max-width: 980px) {
+  $D: 350px;
+}
+@media (max-width: 736px) {
+  $D: 300px;
+}
+@media (max-width: 480px) {
+  $D: 250px;
+}
+@media (max-width: 320px) {
+  $D: 200px;
+}
 
 $R: ($D/2); // radio
 

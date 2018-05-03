@@ -25,10 +25,10 @@
 
 // Palette.
 	$palette: (
-		bg:					#333,
-		fg:					#444,
-		fg-bold:			#555,
-		fg-light: 			#999,
+		bg:					#222,
+		fg:					#ccc,
+		fg-bold:			#aaa,
+		fg-light: 			#eee,
 		border:				rgba(144,144,144,0.5),
 		border-bg:			rgba(144,144,144,0.075),
 		border2:			rgba(144,144,144,0.75),
@@ -47,7 +47,7 @@
 		accent6-alt:		desaturate(darken(#6b88e6, 15), 20),
 
 		dark: (
-			bg:				#666666,
+			bg:				#999,
 			fg-bold:		#ffffff,
 			fg:				rgba(255,255,255,0.75),
 			fg-light:		rgba(255,255,255,0.5),
