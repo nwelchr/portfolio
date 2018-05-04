@@ -1,22 +1,6 @@
 @import "../libs/functions";
 
-$D: 450px; // size control // diameter
-
-@media (max-width: 1140px) {
-  $D: 400px;
-}
-@media (max-width: 980px) {
-  $D: 350px;
-}
-@media (max-width: 736px) {
-  $D: 300px;
-}
-@media (max-width: 480px) {
-  $D: 250px;
-}
-@media (max-width: 320px) {
-  $D: 200px;
-}
+@mixin styling($D) {
 
 $R: ($D/2); // radio
 
@@ -42,12 +26,12 @@ $A: 5s; // accelerate
   font-family: 'HelveticaNeue-Medium', sans-serif;
   font-size: $R/4;
   line-height: $D;
-  transition: 1.5s ease;
+  transition: width, transform 1.5s ease;
   user-select: none!important;
 }
 
 .nick-span {
-  transition: 1s ease;
+  transition: color 1s ease;
 }
 
 .nick:hover {
@@ -133,12 +117,24 @@ $A: 5s; // accelerate
   }
 }
 
+.actions li {
+  display: flex!important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+}
+
 .down-arrow {
-  filter: invert(80%);
-  width: 50px;
-  height: 50px;
-  margin-left: -2px;
-  margin-top: 7px;
+  width: 50%;
+  height: auto;
+  margin-top: 5px;
 }
 
 #arrow-wrapper {
@@ -149,7 +145,7 @@ $A: 5s; // accelerate
   height: 75px!important;
   padding: 0!important;
   margin: 0;
-  border-radius: 50%!important;
+  border-radius: 50%;
   overflow: hidden;
 }
 
@@ -167,4 +163,24 @@ $A: 5s; // accelerate
     transform:rotateZ(360deg);
     // transform: rotateY(0deg);
   }
+}
+}
+
+@media (max-width: 1680px) {
+  @include styling($D: 400px);
+}
+@media (max-width: 1140px) {
+  @include styling($D: 400px);
+}
+@media (max-width: 980px) {
+  @include styling($D: 350px);
+}
+@media (max-width: 736px) {
+  @include styling($D: 300px);
+}
+@media (max-width: 480px) {
+  @include styling($D: 250px);
+}
+@media (max-width: 320px) {
+  @include styling($D: 200px);
 }
