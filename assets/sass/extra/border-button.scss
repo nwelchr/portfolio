@@ -1,82 +1,132 @@
-$blue: blue;
-$red: red;
+.progress{
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left{
+  left: 0;
+}
+.progress .progress-bar{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar{
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right{
+  right: 0;
+}
+.progress .progress-right .progress-bar{
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: #44484b;
+  font-size: 24px;
+  color: #fff;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.progress.blue .progress-bar{
+  border-color: #049dff;
+}
+.progress.blue .progress-left .progress-bar{
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
 
-button {
-    background: none;
-    border: 0;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 1em 2em;
-    
-    // Using inset box-shadow instead of border for sizing simplicity
-    box-shadow: inset 0 0 0 2px $red;
-    color: $red;
-  
-    // Required, since we're setting absolute on pseudo-elements
-    position: relative;
-    vertical-align: middle;
-  
-    &::before,
-    &::after {
-      box-sizing: inherit;
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: auto;
-    }
+@keyframes loading-1{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
   }
-  
-  .spin {
-    width: 5em;
-    height: 5em;
-    padding: 0;
-    
-    &:hover {
-      color: $blue;
-    }
-  
-    &::before,
-    &::after {
-      top: 0;
-      left: 0;
-    }
-  
-    &::before {
-      border: 2px solid transparent; // We're animating border-color again
-    }
-  
-    &:hover::before {
-      border-top-color: $blue; // Show borders
-      border-right-color: $blue;
-      border-bottom-color: $blue;
-  
-      transition:
-        border-top-color 0.15s linear, // Stagger border appearances
-        border-right-color 0.15s linear 0.10s,
-        border-bottom-color 0.15s linear 0.20s;
-    }
-  
-    &::after {
-      border: 0px solid transparent; // Makes border thinner at the edges? I forgot what I was doing
-    }
-  
-    &:hover::after {
-      border-top: 2px solid $blue; // Shows border
-      border-left-width: 2px; // Solid edges, invisible borders
-      border-right-width: 2px; // Solid edges, invisible borders
-      transform: rotate(270deg); // Rotate around circle
-      transition:
-        transform 0.4s linear 0s,
-        border-left-width 0s linear 0.35s; // Solid edge post-rotation
-    }
+  100%{
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
   }
-  
-  .circle {
-    border-radius: 100%;
-    box-shadow: none;
-      
-    &::before,
-    &::after {
-      border-radius: 100%;
-    }
+}
+@keyframes loading-2{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
   }
+  100%{
+      -webkit-transform: rotate(144deg);
+      transform: rotate(144deg);
+  }
+}
+@keyframes loading-3{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+}
+@keyframes loading-4{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(36deg);
+      transform: rotate(36deg);
+  }
+}
+@keyframes loading-5{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(126deg);
+      transform: rotate(126deg);
+  }
+}
+@media only screen and (max-width: 990px){
+  .progress{ margin-bottom: 20px; }
+}
