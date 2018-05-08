@@ -1003,6 +1003,7 @@ button,
   &.style2 {
     @include dark(#111);
     background-attachment: fixed, fixed;
+    // background-image: url('images/background.png')!important;
     // background-image:		url('images/overlay1.png'),		url('../../images/header.jpg');
     background-size: auto, cover;
   }
@@ -1099,6 +1100,7 @@ body.is-loading {
   @include padding(6em, 0, (0, 0, _size(element-margin), 0));
   @include dark(#111);
   background-attachment: fixed, fixed, fixed;
+  // background-image: url('images/background.png');
   // background-color: _palette(fg);
   // background-image:		url('images/overlay2.png'),		url('images/overlay4.svg'),		linear-gradient(45deg, _palette(accent6-alt), _palette(accent3-alt) 50%, _palette(accent1-alt) 95%);
   background-position: top left, center center, center center;
