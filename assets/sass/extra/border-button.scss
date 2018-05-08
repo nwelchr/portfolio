@@ -70,7 +70,6 @@
   -webkit-transform-origin: center left;
   transform-origin: center left;
 }
-}
 
 .progress:hover .progress-right .progress-bar{
   left: -100%;
@@ -83,7 +82,7 @@
   transition: border
 }
 
-.progress.blue .progress-bar{
+.progress .progress-bar{
   border-color: #801d8d;
 }
 .progress:hover .progress-left .progress-bar{
