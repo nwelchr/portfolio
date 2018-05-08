@@ -29,11 +29,49 @@
 					little freebie from <a href="http://html5up.net">HTML5 UP</a>.</h1> -->
 					<!-- <p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
 					lobortis feugiat sapien sed etiam volutpat accumsan.</p> -->
+
 					<ul class="actions">
-						<!-- <li><a href="#one" id="arrow-wrapper" class="button scrolly"><img class="down-arrow" src="images/arrow.png"></img></a></li> -->
-						<!-- <li><button href="#one" id="arrow-wrapper" class="border-spin circle"><img class="down-arrow" src="images/arrow.png"></img></button></li> -->
+
+							<div class="progress-container">
+									<a href="#one" id="intro-scroll" class="scrolly">
+									<div class="progress blue">
+										<span class="progress-left">
+											<span class="progress-bar"></span>
+										</span>
+										<span class="progress-right">
+											<span class="progress-bar"></span>
+										</span>
+										<div class="progress-value"><img class="down-arrow" src="images/arrow.png" /></div>
+									</div>
+								</a>
+						</div>	
 
 						<script>
+							introScroll = document.getElementById('intro-scroll');
+							let timeout;
+
+							const clickTimeout = () => {
+								timeout = setTimeout(() => introScroll.click(), 1200);
+							}
+
+							const removeClickTimeout = () => {
+								clearTimeout(timeout);
+							}
+
+							introScroll.addEventListener('mouseenter', () => {
+								clickTimeout();
+							});
+
+							introScroll.addEventListener('mouseleave', () => {
+								removeClickTimeout();
+							});
+
+							introScroll.addEventListener('click', () => {
+								removeClickTimeout();
+							});
+						</script>
+
+						<!-- <script>
 							const arrowWrapper = document.getElementById('arrow-wrapper');
 							arrowWrapper.addEventListener('mouseenter', () => {
 								arrowWrapper.classList.add('spin');
@@ -43,23 +81,11 @@
 								});
 							});
 		
-						</script>
+						</script> -->
 					</ul>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-3 col-sm-6">
-								<div class="progress blue">
-									<span class="progress-left">
-										<span class="progress-bar"></span>
-									</span>
-									<span class="progress-right">
-										<span class="progress-bar"></span>
-									</span>
-									<div class="progress-value">100%</div>
-								</div>
-							</div>
-						</div>
-					</div>					   
+
+					
+					
 				</div>
 			</section>
 

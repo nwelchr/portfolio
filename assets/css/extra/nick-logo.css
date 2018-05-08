@@ -2,7 +2,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -69,7 +70,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -95,7 +96,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -162,7 +164,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -188,7 +190,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -255,7 +258,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -281,7 +284,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -348,7 +352,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -374,7 +378,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -441,7 +446,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -467,7 +472,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -534,7 +540,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {

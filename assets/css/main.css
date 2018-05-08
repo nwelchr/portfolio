@@ -4,7 +4,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -71,7 +72,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -97,7 +98,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -164,7 +166,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -190,7 +192,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -257,7 +260,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -283,7 +286,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -350,7 +354,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -376,7 +380,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -443,7 +448,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -469,7 +474,8 @@
   .nick-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: -30px; }
   .nick {
     color: #f0f0f0;
     position: relative;
@@ -536,7 +542,7 @@
       align-items: center;
       text-align: center; }
   .down-arrow {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-top: 5px; }
   #arrow-wrapper {
@@ -558,21 +564,35 @@
     100% {
       transform: rotateZ(360deg); } } }
 
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px; }
+
+.scrolly {
+  height: 60px;
+  text-decoration: none;
+  border: 0; }
+
 .progress {
-  width: 150px;
-  height: 150px;
-  line-height: 150px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   background: none;
   margin: 0 auto;
   box-shadow: none;
   position: relative; }
+
+.down-arrow {
+  top: 15px !important; }
 
 .progress:after {
   content: "";
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 12px solid #fff;
+  border: 2px solid #999;
   position: absolute;
   top: 0;
   left: 0; }
@@ -591,11 +611,14 @@
 .progress .progress-bar {
   width: 100%;
   height: 100%;
+  border-width: 0px;
   background: none;
-  border-width: 12px;
   border-style: solid;
   position: absolute;
   top: 0; }
+
+.progress:hover .progress-bar {
+  border-width: 2px; }
 
 .progress .progress-left .progress-bar {
   left: 100%;
@@ -608,33 +631,20 @@
 .progress .progress-right {
   right: 0; }
 
-.progress .progress-right .progress-bar {
+.progress:hover .progress-right .progress-bar {
   left: -100%;
   border-top-left-radius: 80px;
   border-bottom-left-radius: 80px;
   border-right: 0;
   -webkit-transform-origin: center right;
   transform-origin: center right;
-  animation: loading-1 1.8s linear forwards; }
-
-.progress .progress-value {
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  background: #44484b;
-  font-size: 24px;
-  color: #fff;
-  line-height: 135px;
-  text-align: center;
-  position: absolute;
-  top: 5%;
-  left: 5%; }
+  animation: loading-1 .6s linear forwards; }
 
 .progress.blue .progress-bar {
-  border-color: #049dff; }
+  border-color: #801d8d; }
 
-.progress.blue .progress-left .progress-bar {
-  animation: loading-2 1.5s linear forwards 1.8s; }
+.progress:hover .progress-left .progress-bar {
+  animation: loading-2 .6s linear forwards .6s; }
 
 @keyframes loading-1 {
   0% {
@@ -650,31 +660,7 @@
     transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(144deg);
-    transform: rotate(144deg); } }
-
-@keyframes loading-3 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); } }
-
-@keyframes loading-4 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(36deg);
-    transform: rotate(36deg); } }
-
-@keyframes loading-5 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(126deg);
-    transform: rotate(126deg); } }
+    transform: rotate(180deg); } }
 
 @media only screen and (max-width: 990px) {
   .progress {
@@ -2649,10 +2635,10 @@ button,
       -webkit-transition: -webkit-transform 3s ease;
       -ms-transition: -ms-transform 3s ease;
       transition: transform 3s ease;
-      -moz-transition-delay: 1s;
-      -webkit-transition-delay: 1s;
-      -ms-transition-delay: 1s;
-      transition-delay: 1s;
+      -moz-transition-delay: .5s;
+      -webkit-transition-delay: .5s;
+      -ms-transition-delay: .5s;
+      transition-delay: .5s;
       -moz-transform: translateY(0);
       -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
