@@ -167,9 +167,11 @@ $A: 5s; // accelerate
 }
 }
 
+@include styling($D: 500px);
 
-@include styling($D: 400px);
-
+@media (max-width: 1680px) {
+  @include styling($D: 400px);
+}
 @media (max-width: 1140px) {
   @include styling($D: 400px);
 }
