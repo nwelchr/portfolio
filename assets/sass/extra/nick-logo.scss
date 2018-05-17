@@ -167,9 +167,9 @@ $A: 5s; // accelerate
 }
 }
 
-@media (max-width: 1680px) {
-  @include styling($D: 400px);
-}
+
+@include styling($D: 400px);
+
 @media (max-width: 1140px) {
   @include styling($D: 400px);
 }
