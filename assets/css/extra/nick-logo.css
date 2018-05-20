@@ -5,7 +5,8 @@
   margin-top: -30px; }
 
 .nick-wrapper * {
-  animation: fadein 2s ease forwards; }
+  animation: fadein 2s ease forwards;
+  background-color: green; }
 
 @keyframes fadein {
   0% {
@@ -121,7 +122,8 @@
     justify-content: center;
     margin-top: -30px; }
   .nick-wrapper * {
-    animation: fadein 2s ease forwards; }
+    animation: fadein 2s ease forwards;
+    background-color: green; }
   @keyframes fadein {
     0% {
       opacity: 0; }
@@ -222,7 +224,8 @@
     justify-content: center;
     margin-top: -30px; }
   .nick-wrapper * {
-    animation: fadein 2s ease forwards; }
+    animation: fadein 2s ease forwards;
+    background-color: green; }
   @keyframes fadein {
     0% {
       opacity: 0; }
@@ -323,7 +326,8 @@
     justify-content: center;
     margin-top: -30px; }
   .nick-wrapper * {
-    animation: fadein 2s ease forwards; }
+    animation: fadein 2s ease forwards;
+    background-color: green; }
   @keyframes fadein {
     0% {
       opacity: 0; }
@@ -424,7 +428,8 @@
     justify-content: center;
     margin-top: -30px; }
   .nick-wrapper * {
-    animation: fadein 2s ease forwards; }
+    animation: fadein 2s ease forwards;
+    background-color: green; }
   @keyframes fadein {
     0% {
       opacity: 0; }
@@ -525,7 +530,8 @@
     justify-content: center;
     margin-top: -30px; }
   .nick-wrapper * {
-    animation: fadein 2s ease forwards; }
+    animation: fadein 2s ease forwards;
+    background-color: green; }
   @keyframes fadein {
     0% {
       opacity: 0; }
@@ -626,7 +632,8 @@
     justify-content: center;
     margin-top: -30px; }
   .nick-wrapper * {
-    animation: fadein 2s ease forwards; }
+    animation: fadein 2s ease forwards;
+    background-color: green; }
   @keyframes fadein {
     0% {
       opacity: 0; }
