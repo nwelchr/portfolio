@@ -15,7 +15,9 @@ $A: 5s; // accelerate
   align-items: center;
   justify-content: center;
   margin-top: -30px;
-  opacity: 0;
+}
+
+.nick-wrapper * {
   animation: fadein 2s ease forwards;
 }
 
