@@ -186,6 +186,9 @@ $A: 5s; // accelerate
 @media (max-width: 980px) {
   @include styling($D: 350px);
 }
+@media (max-height: 600px) {
+  @include styling($D: 350px);
+}
 @media (max-width: 736px) {
   @include styling($D: 300px);
 }
@@ -193,5 +196,8 @@ $A: 5s; // accelerate
   @include styling($D: 250px);
 }
 @media (max-width: 320px) {
+  @include styling($D: 200px);
+}
+@media (max-height: 400px) {
   @include styling($D: 200px);
 }

@@ -37,6 +37,84 @@
 
 /* Basic */
 
+/* carousel */
+// Carousel configuration parameters
+$item-width: 30%; // Now we can use percentages!
+$item-separation: 0px; // This now is set with Js
+$viewer-distance: 1200px;
+
+.carousel {
+	padding: 20px;
+
+	perspective: $viewer-distance;
+	overflow: hidden;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	> * {
+		flex: 0 0 auto;
+	}
+	
+	figure {
+		margin: 0;
+		
+		width: $item-width;
+		transform-style: preserve-3d;
+		transition: transform 0.5s;
+		
+		img {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0 $item-separation / 2;
+			
+			&:not(:first-of-type) {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+	
+	nav {
+		display: flex;
+		justify-content: center;
+		margin: 20px 0;
+		
+		div {
+      user-select: none;
+      font-size: 30px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+			margin: 0 20px;
+      cursor: pointer;
+      border-radius: 50%;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      border: 1px solid white;
+      transform: scale(1);
+      transition: .2s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: .2s ease;
+      }
+
+      &:active {
+        transform: scale(.99);
+        transition: .1s ease;
+      }
+    }
+
+    }
+	}
+
+/* end carousel */
+
+
 body {
   background: _palette(bg);
 
@@ -989,6 +1067,10 @@ button,
 /* Main */
 
 .main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @include padding(6em, 0);
 
   &.style1 {
@@ -1017,6 +1099,9 @@ button,
   overflow: hidden;
   position: relative;
   text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 
   h1 {
     margin: 0;
@@ -1137,6 +1222,23 @@ body.is-loading {
 @include breakpoint(xlarge) {
   /* Basic */
 
+  #one .container, .container .row, .image-holder, .image-holder span {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .text-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .image-holder {
+    width: 30%;
+  }
+
   body,
   input,
   select,
@@ -1223,6 +1325,10 @@ body.is-loading {
 
 @include breakpoint(medium) {
   /* List */
+
+  .text-holder {
+    align-items: center;
+  }
 
   ul {
     &.major-icons {
