@@ -32,10 +32,12 @@
 
 			const hireMe = document.querySelector('.hire-me'); 
 			hireMe.addEventListener('click', () => {
+				stickyHeader.classList.add('hidden');
 				setTimeout((() => {
-					const emailButton = document.querySelector('.fa-envelope');
-					stickyHeader.classList.add('hidden');
-					emailButton.classList.add('glowing');
+					const email = document.querySelector('.email');
+					email.classList.add('glowing');
+					const resume = document.querySelector('.resume');
+					resume.classList.add('glowing');
 				}
 				), 2000);
 				// setTimeout((() => stickyHeader.style.display = "none"), 6000);			
@@ -832,9 +834,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<!-- <header class="major"> -->
 		<h2>Wanna hire me? Or just looking for more?</h2>
 		<!-- </header> -->
-		<ul class="actions">
+		<ul class="actions footer-actions">
 			<li>
+				<button class="resume">
 				<a href="assets/resume/Resume-Nicholas-Welch.pdf">Resume</a>
+				</button>
+			</li>
+			<li>
+				<button class="email">
+				<a href="mailto:nwelchr@gmail.com">Email</a>
+				</button>
 			</li>
 		</ul>
 		<span style="position:absolute; z-index: -10; font-size: 1px;">Email</span>
@@ -857,11 +866,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<li>
 				<a href="https://www.linkedin.com/in/nwelchr/" class="icon alt fa-linkedin">
 					<span class="label">LinkedIn</span>
-				</a>
-			</li>
-			<li>
-				<a href="mailto:nwelchr@gmail.com" class="icon alt fa-envelope">
-					<span class="label">Email</span>
 				</a>
 			</li>
 		</ul>

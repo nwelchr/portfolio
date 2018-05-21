@@ -111,9 +111,59 @@ $viewer-distance: 1200px;
     }
 
     }
-	}
+  }
 
 /* end carousel */
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  button {
+    padding: 0;
+    margin: 10px;
+    outline: 0;
+    border: 1px solid white;
+    box-shadow: 0px 0px 0px black!important;
+  }
+
+  a {
+    display: block!important;
+    width: 100%!important;
+    height: 100%;
+    text-decoration: none;
+    border: 0;
+    padding: 0 2em;
+  }
+
+  .email, .resume {
+    &.glowing {
+    }
+  }
+
+  .email {
+    &.glowing {
+      animation: fadeemail 3s forwards;
+      box-shadow: 0px 0px 0px black;
+    }
+  }
+
+  @keyframes fadeemail {
+    0% {box-shadow: 0px 0px 0px black;}
+    100% {box-shadow: 0px 0px 30px #f45;}
+  }
+
+  .resume {
+    &.glowing {
+      animation: faderesume 3s forwards;
+      box-shadow: 0px 0px 0px black;
+    }
+  }
+
+  @keyframes faderesume {
+    0% {box-shadow: 0px 0px 0px black;}
+    100% {box-shadow: 0px 0px 30px rgb(58,211,192);}
+  }
+}
 
 
 body {
