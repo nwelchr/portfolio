@@ -14,6 +14,34 @@
 
 <body>
 
+	<header class="sticky-header">
+			<section class="notification">
+				Cut to the chase and <a href="#footer" class="scrolly hire-me">hire me</a>.
+			</section>
+			<section class="dismiss">
+				<img class="dismiss-img" src="images/dismiss.png" />
+			</section>
+		</header>
+
+		<script>
+			const dismiss = document.querySelector('.dismiss-img');
+			const stickyHeader = document.querySelector('.sticky-header');
+			dismiss.addEventListener('click', () => {
+				stickyHeader.style.display = "none";
+			})
+
+			const hireMe = document.querySelector('.hire-me'); 
+			hireMe.addEventListener('click', () => {
+				setTimeout((() => {
+					const emailButton = document.querySelector('.fa-envelope');
+					stickyHeader.classList.add('hidden');
+					emailButton.classList.add('glowing');
+				}
+				), 2000);
+				// setTimeout((() => stickyHeader.style.display = "none"), 6000);			
+			})
+		</script>
+
 	<!-- Header -->
 	<section id="header" class="full-screen">
 		<div class="inner">
@@ -206,7 +234,7 @@
 	<section id="two" class="main style2 special">
 		<div class="container">
 			<!-- <header class="major"> -->
-			<h2>My stack</h2>
+			<h2>My ever-expanding toolkit.</h2>
 			<!-- </header> -->
 			<div class="logos">
 				<div class="carousel" data-gap="20">
@@ -257,15 +285,16 @@
 			counter = 0;
 
 			setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
-			window.addEventListener("resize", () => {
-				setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
-			});
+			// window.addEventListener("resize", () => {
+			// 	setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+			// });
+
+			let click;
+			let setClick = () => {
+				click = setInterval((() => onClick(null, true)), 2000);
+			}
 
 			setupNavigation();
-
-			function setClickInterval() {
-				setInterval((() => onClick(null, true)), 2000);
-			}
 
 			function setupCarousel(n, s) {
 				var apothem = s / (2 * Math.tan(Math.PI / n));
@@ -287,11 +316,11 @@
 			function onClick(e, timeout) {
 				let t;
 				if (!timeout) {
-					console.log('hi');
 					e.stopPropagation();
 					t = e.target;
+					clearInterval(click);
+					setClick();
 				} else {
-					console.log('hi');
 					
 					t = document.querySelector('.next');
 				}
@@ -316,7 +345,7 @@
 
 			function setupNavigation() {
 					nav.addEventListener("click", onClick, true);
-					setClickInterval();
+					setClick();
 					rotateCarousel(counter);
 				}
 
@@ -346,6 +375,7 @@
 		.logo-img {
 			opacity: .05;
 			height: 100%;
+			width: auto;
 			object-fit: contain;
 			transition: .5s ease;
 			position: relative;
@@ -800,14 +830,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<!-- Footer -->
 	<section id="footer">
 		<!-- <header class="major"> -->
-		<h2>Interested in learning more?</h2>
+		<h2>Wanna hire me? Or just looking for more?</h2>
 		<!-- </header> -->
 		<ul class="actions">
 			<li>
 				<a href="assets/resume/Resume-Nicholas-Welch.pdf">Resume</a>
 			</li>
 		</ul>
-		<span style="position:absolute; z-index: -9999; font-size: 1px;">Email</span>
+		<span style="position:absolute; z-index: -10; font-size: 1px;">Email</span>
 		<ul class="icons">
 			<li>
 				<a href="https://www.facebook.com/welnic316" class="icon alt fa-facebook">
@@ -833,12 +863,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				<a href="mailto:nwelchr@gmail.com" class="icon alt fa-envelope">
 					<span class="label">Email</span>
 				</a>
-			</li>
-		</ul>
-		<ul class="copyright">
-			<li>&copy; Nick Welch</li>
-			<li>Template:
-				<a href="http://html5up.net">HTML5 UP</a>
 			</li>
 		</ul>
 	</section>
