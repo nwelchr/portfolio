@@ -1,0 +1,54 @@
+.sticky-header {
+  background-color: rgba(10, 10, 10, 0.7);
+  width: calc(100vw);
+  height: 50px;
+  position: fixed;
+  z-index: 9999 !important;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeinsticky 5s ease 3s forwards;
+  user-select: none;
+  transition: opacity 3s ease; }
+  .sticky-header.hidden {
+    animation: fadeoutsticky 1.5s ease forwards; }
+
+@keyframes fadeoutsticky {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeinsticky {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .sticky-header .hire-me {
+    color: #f45;
+    transition: 1s ease; }
+    .sticky-header .hire-me:hover {
+      color: #fff; }
+  .sticky-header .notification {
+    color: #ccc;
+    font-size: 20px; }
+  .sticky-header .dismiss {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center; }
+  .sticky-header .dismiss-img {
+    width: 12px;
+    height: 12px;
+    transform: scale(1);
+    transition: 0.1s ease;
+    user-select: none; }
+    .sticky-header .dismiss-img:hover {
+      transform: scale(1.1);
+      transition: 0.1s ease; }
+    .sticky-header .dismiss-img:active {
+      transform: scale(0.98);
+      transition: 0.1s ease; }

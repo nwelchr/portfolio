@@ -1,38 +1,48 @@
-@import "libs/vars";
-@import "libs/functions";
-@import "libs/mixins";
-@import "extra/nick-logo";
-@import "extra/border-button";
-@import "extra/hire-me";
-@import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'extra/nick-logo';
+@import 'extra/border-button';
+@import 'extra/hire-me';
+@import url('font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic');
 
-
-@import "libs/skel";
+@import 'libs/skel';
 
 @include skel-breakpoints(
   (
-    xlarge: "(max-width: 1680px)",
-    large: "(max-width: 1140px)",
-    medium: "(max-width: 980px)",
-    small: "(max-width: 736px)",
-    xsmall: "(max-width: 480px)",
-    xxsmall: "(max-width: 320px)"
+    xlarge: '(max-width: 1680px)',
+    large: '(max-width: 1140px)',
+    medium: '(max-width: 980px)',
+    small: '(max-width: 736px)',
+    xsmall: '(max-width: 480px)',
+    xxsmall: '(max-width: 320px)'
   )
 );
 
 @include skel-layout(
   (
-    reset: "full",
-    boxModel: "border",
-    grid: (gutters: 2em),
+    reset: 'full',
+    boxModel: 'border',
+    grid: (
+      gutters: 2em
+    ),
     conditionals: true,
     containers: 60em,
-    breakpoints:
-      (
-        large: (containers: 90%, grid: (gutters: 1.5em)),
-        medium: (containers: (100%, true))
+    breakpoints: (
+      large: (
+        containers: 90%,
+        grid: (
+          gutters: 1.5em
+        )
+      ),
+      medium: (
+        containers: (
+          100%,
+          true
+        )
       )
+    )
   )
 );
 
@@ -45,51 +55,51 @@ $item-separation: 0px; // This now is set with Js
 $viewer-distance: 1200px;
 
 .carousel {
-	padding: 20px;
+  padding: 20px;
 
-	perspective: $viewer-distance;
-	overflow: hidden;
-	
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	> * {
-		flex: 0 0 auto;
-	}
-	
-	figure {
-		margin: 0;
-		
-		width: $item-width;
-		transform-style: preserve-3d;
-		transition: transform 0.5s;
-		
-		img {
-			width: 100%;
-			box-sizing: border-box;
-			padding: 0 $item-separation / 2;
-			
-			&:not(:first-of-type) {
-				position: absolute;
-				left: 0;
-				top: 0;
-			}
-		}
-	}
-	
-	nav {
-		display: flex;
-		justify-content: center;
-		margin: 20px 0;
-		
-		div {
+  perspective: $viewer-distance;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > * {
+    flex: 0 0 auto;
+  }
+
+  figure {
+    margin: 0;
+
+    width: $item-width;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+
+    img {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 $item-separation / 2;
+
+      &:not(:first-of-type) {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    div {
       user-select: none;
       font-size: 30px;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-			margin: 0 20px;
+      margin: 0 20px;
       cursor: pointer;
       border-radius: 50%;
       padding: 0;
@@ -97,21 +107,20 @@ $viewer-distance: 1200px;
       height: 50px;
       border: 1px solid white;
       transform: scale(1);
-      transition: .2s ease;
+      transition: 0.2s ease;
 
       &:hover {
         transform: scale(1.05);
-        transition: .2s ease;
+        transition: 0.2s ease;
       }
 
       &:active {
-        transform: scale(.99);
-        transition: .1s ease;
+        transform: scale(0.99);
+        transition: 0.1s ease;
       }
     }
-
-    }
   }
+}
 
 /* end carousel */
 
@@ -123,23 +132,24 @@ $viewer-distance: 1200px;
     margin: 10px;
     outline: 0;
     border: 1px solid white;
-    box-shadow: 0px 0px 0px black!important;
+    box-shadow: 0px 0px 0px black !important;
   }
 
   a {
-    display: block!important;
-    width: 100%!important;
+    display: block !important;
+    width: 100% !important;
     height: 100%;
     text-decoration: none;
     border: 0;
     padding: 0 2em;
   }
 
-  .email, .resume {
+  .email,
+  .resume {
     &.glowing {
     }
   }
-  
+
   .email {
     &.glowing {
       animation: fadeemail 3s forwards;
@@ -148,8 +158,12 @@ $viewer-distance: 1200px;
   }
 
   @keyframes fadeemail {
-    0% {box-shadow: 0px 0px 0px black;}
-    100% {box-shadow: 0px 0px 30px #f45;}
+    0% {
+      box-shadow: 0px 0px 0px black;
+    }
+    100% {
+      box-shadow: 0px 0px 30px #f45;
+    }
   }
 
   .resume {
@@ -160,11 +174,14 @@ $viewer-distance: 1200px;
   }
 
   @keyframes faderesume {
-    0% {box-shadow: 0px 0px 0px black;}
-    100% {box-shadow: 0px 0px 30px rgb(58,211,192);}
+    0% {
+      box-shadow: 0px 0px 0px black;
+    }
+    100% {
+      box-shadow: 0px 0px 30px rgb(58, 211, 192);
+    }
   }
 }
-
 
 body {
   background: _palette(bg);
@@ -173,8 +190,8 @@ body {
     *,
     *:before,
     *:after {
-      @include vendor("animation", "none !important");
-      @include vendor("transition", "none !important");
+      @include vendor('animation', 'none !important');
+      @include vendor('transition', 'none !important');
     }
   }
 }
@@ -192,10 +209,10 @@ textarea {
 
 a {
   @include vendor(
-    "transition",
+    'transition',
     (
-      "color #{_duration(transition)} ease-in-out",
-      "border-color #{_duration(transition)} ease-in-out"
+      'color #{_duration(transition)} ease-in-out',
+      'border-color #{_duration(transition)} ease-in-out'
     )
   );
   border-bottom: dotted 1px _palette(fg);
@@ -381,7 +398,7 @@ header {
 
     &:after {
       background: _palette(border);
-      content: "";
+      content: '';
       display: inline-block;
       height: 1px;
       margin-top: (_size(element-margin) * 0.75);
@@ -420,12 +437,12 @@ label {
   margin: 0 0 (_size(element-margin) * 0.5) 0;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
 select,
 textarea {
-  @include vendor("appearance", "none");
+  @include vendor('appearance', 'none');
   background: _palette(border-bg);
   border-radius: _size(border-radius);
   border: none;
@@ -453,7 +470,7 @@ textarea {
 
   &:before {
     color: _palette(border);
-    content: "\f078";
+    content: '\f078';
     display: block;
     height: _size(element-height);
     line-height: _size(element-height);
@@ -470,9 +487,9 @@ textarea {
   }
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
 select {
   height: _size(element-height);
 }
@@ -481,9 +498,9 @@ textarea {
   padding: 0.75em 1em;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  @include vendor("appearance", "none");
+input[type='checkbox'],
+input[type='radio'] {
+  @include vendor('appearance', 'none');
   display: block;
   float: left;
   margin-right: -2em;
@@ -506,7 +523,7 @@ input[type="radio"] {
       background: _palette(border-bg);
       border-radius: _size(border-radius);
       border: solid 1px _palette(border);
-      content: "";
+      content: '';
       display: inline-block;
       height: (_size(element-height) * 0.6);
       left: 0;
@@ -523,7 +540,7 @@ input[type="radio"] {
       background: _palette(dark, bg);
       border-color: _palette(dark, bg);
       color: _palette(dark, fg-bold);
-      content: "\f00c";
+      content: '\f00c';
     }
   }
 
@@ -534,7 +551,7 @@ input[type="radio"] {
   }
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   & + label {
     &:before {
       border-radius: _size(border-radius);
@@ -542,7 +559,7 @@ input[type="checkbox"] {
   }
 }
 
-input[type="radio"] {
+input[type='radio'] {
   & + label {
     &:before {
       border-radius: 100%;
@@ -764,7 +781,7 @@ ul {
       text-align: center;
 
       .icon {
-        @include vendor("transform", "rotate(45deg)");
+        @include vendor('transform', 'rotate(45deg)');
         border-radius: _size(border-radius);
         border: solid 1px _palette(border);
         display: inline-block;
@@ -775,7 +792,7 @@ ul {
         width: 8em;
 
         &:before {
-          @include vendor("transform", "rotate(-45deg)");
+          @include vendor('transform', 'rotate(-45deg)');
           display: inline-block;
           line-height: inherit;
         }
@@ -790,7 +807,7 @@ ul {
 
     li {
       display: inline-block;
-      padding: .5em 0em;
+      padding: 0.5em 0em;
       vertical-align: middle;
 
       &:last-child {
@@ -946,17 +963,17 @@ table {
 
 /* Button */
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
 button,
 .button {
-  @include vendor("appearance", "none");
+  @include vendor('appearance', 'none');
   @include vendor(
-    "transition",
+    'transition',
     (
-      "background-color #{_duration(transition)} ease-in-out",
-      "color #{_duration(transition)} ease-in-out"
+      'background-color #{_duration(transition)} ease-in-out',
+      'color #{_duration(transition)} ease-in-out'
     )
   );
   background-color: transparent;
@@ -1066,9 +1083,9 @@ button,
     }
   }
 
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
+  input[type='submit'],
+  input[type='reset'],
+  input[type='button'],
   button,
   .button {
     box-shadow: inset 0 0 0 1px _palette(dark, border);
@@ -1167,7 +1184,7 @@ button,
     position: relative;
 
     li {
-      padding: .5em 0em;
+      padding: 0.5em 0em;
     }
 
     // &:after {
@@ -1182,26 +1199,26 @@ button,
   }
 
   .inner {
-    @include vendor("transition", ("transform 5s ease", "opacity 5s ease"));
-    @include vendor("transition-delay", "0.25s");
-    @include vendor("transform", "scale(1)");
+    @include vendor('transition', ('transform 5s ease', 'opacity 5s ease'));
+    @include vendor('transition-delay', '0.25s');
+    @include vendor('transform', 'scale(1)');
     opacity: 1;
     position: relative;
     z-index: 1;
 
     .actions {
-      @include vendor("transition", "transform 3s ease");
-      @include vendor("transition-delay", ".5s");
-      @include vendor("transform", "translateY(0)");
+      @include vendor('transition', 'transform 3s ease');
+      @include vendor('transition-delay', '.5s');
+      @include vendor('transform', 'translateY(0)');
       opacity: 1;
     }
   }
 
   &:after {
-    @include vendor("transition", "opacity 1s ease");
+    @include vendor('transition', 'opacity 1s ease');
     // background-image: linear-gradient(45deg, _palette(accent3-alt), _palette(accent6-alt));
     background-image: linear-gradient(45deg, #000, #000);
-    content: "";
+    content: '';
     height: 100%;
     left: 0;
     opacity: 0;
@@ -1214,11 +1231,11 @@ button,
 body.is-loading {
   #header {
     .inner {
-      @include vendor("transform", "scale(1.05)");
+      @include vendor('transform', 'scale(1.05)');
       opacity: 0;
 
       .actions {
-        @include vendor("transform", "translateY(30em)");
+        @include vendor('transform', 'translateY(30em)');
         opacity: 0;
       }
     }
@@ -1273,7 +1290,10 @@ body.is-loading {
 @include breakpoint(xlarge) {
   /* Basic */
 
-  #one .container, .container .row, .image-holder, .image-holder span {
+  #one .container,
+  .container .row,
+  .image-holder,
+  .image-holder span {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1285,7 +1305,7 @@ body.is-loading {
     align-items: flex-start;
     justify-content: center;
   }
-  
+
   .image-holder {
     width: 30%;
   }
@@ -1484,9 +1504,9 @@ body.is-loading {
 
   /* Button */
 
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
+  input[type='submit'],
+  input[type='reset'],
+  input[type='button'],
   button,
   .button {
     height: 3em;
@@ -1528,7 +1548,7 @@ body.is-loading {
 
       li {
         display: block;
-        padding: .5em 0em;
+        padding: 0.5em 0em;
         text-align: center;
         width: 100%;
 
@@ -1562,9 +1582,9 @@ body.is-loading {
 
   /* Button */
 
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
+  input[type='submit'],
+  input[type='reset'],
+  input[type='button'],
   .button {
     padding: 0;
   }
