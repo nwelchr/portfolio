@@ -15,34 +15,35 @@
 <body>
 
 	<header class="sticky-header">
-			<section class="notification">
-				Cut to the chase and <a href="#footer" class="scrolly hire-me">hire me</a>.
-			</section>
-			<section class="dismiss">
-				<img class="dismiss-img" src="images/dismiss.png" />
-			</section>
-		</header>
+		<section class="notification">
+			Cut to the chase and
+			<a href="#footer" class="scrolly hire-me">hire me</a>.
+		</section>
+		<section class="dismiss">
+			<img class="dismiss-img" src="images/dismiss.png" />
+		</section>
+	</header>
 
-		<script>
-			const dismiss = document.querySelector('.dismiss-img');
-			const stickyHeader = document.querySelector('.sticky-header');
-			dismiss.addEventListener('click', () => {
-				stickyHeader.style.display = "none";
-			})
+	<script>
+		const dismiss = document.querySelector('.dismiss-img');
+		const stickyHeader = document.querySelector('.sticky-header');
+		dismiss.addEventListener('click', () => {
+			stickyHeader.style.display = "none";
+		})
 
-			const hireMe = document.querySelector('.hire-me'); 
-			hireMe.addEventListener('click', () => {
-				stickyHeader.classList.add('hidden');
-				setTimeout((() => {
-					const email = document.querySelector('.email');
-					email.classList.add('glowing');
-					const resume = document.querySelector('.resume');
-					resume.classList.add('glowing');
-				}
-				), 2000);
-				// setTimeout((() => stickyHeader.style.display = "none"), 6000);			
-			})
-		</script>
+		const hireMe = document.querySelector('.hire-me');
+		hireMe.addEventListener('click', () => {
+			stickyHeader.classList.add('hidden');
+			setTimeout((() => {
+				const email = document.querySelector('.email');
+				email.classList.add('glowing');
+				const resume = document.querySelector('.resume');
+				resume.classList.add('glowing');
+			}
+			), 2000);
+			// setTimeout((() => stickyHeader.style.display = "none"), 6000);			
+		})
+	</script>
 
 	<!-- Header -->
 	<section id="header" class="full-screen">
@@ -140,7 +141,7 @@
 					</div>
 					<div class="image-holder 6u$ 12u$(medium) important(medium)">
 						<img src="images/profile-image.jpg" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover; border: 1px dotted #999; padding: 2px;"
-						    alt="" />
+						 alt="" />
 					</div>
 				</div>
 			</div>
@@ -241,7 +242,7 @@
 			<div class="logos">
 				<div class="carousel" data-gap="20">
 					<figure>
-						<img class="logo-img purple" src="images/logos/react.png" />						
+						<img class="logo-img purple" src="images/logos/react.png" />
 						<img class="logo-img purple" src="images/logos/redux.png" />
 						<img class="logo-img purple" src="images/logos/react-native.png" />
 						<img class="logo-img purple" src="images/logos/react-vr.png" />
@@ -261,12 +262,13 @@
 						<img class="logo-img blue" src="images/logos/rspec.png" />
 					</figure>
 					<nav>
-						<div class="nav prev"><</div>
-						<div class="nav next">></div>
+						<div class="nav prev">
+							<</div>
+								<div class="nav next">></div>
 					</nav>
+					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 	</section>
 
@@ -327,7 +329,7 @@
 					clearInterval(click);
 					setClick();
 				} else {
-					
+
 					t = document.querySelector('.next');
 				}
 				if (t.tagName.toUpperCase() != "DIV") return;
@@ -350,10 +352,10 @@
 			}
 
 			function setupNavigation() {
-					nav.addEventListener("click", onClick, true);
-					setClick();
-					rotateCarousel(counter);
-				}
+				nav.addEventListener("click", onClick, true);
+				setClick();
+				rotateCarousel(counter);
+			}
 
 			function rotateCarousel(imageIndex) {
 				figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
@@ -465,7 +467,8 @@
 					</span>
 					<!-- <h3>Magna feugiat lorem</h3> -->
 					<p>
-						The Power of Friendship is a minimalist puzzle platformer where a blocky, motley crew must work together to succeed. Made in native JavaScript, HTML, and CSS.
+						The Power of Friendship is a minimalist puzzle platformer where a blocky, motley crew must work together to succeed. Made
+						in native JavaScript, HTML, and CSS.
 					</p>
 					<ul class="actions">
 						<li>
@@ -840,12 +843,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<ul class="actions footer-actions">
 			<li>
 				<button class="resume">
-				<a href="assets/resume/Resume-Nicholas-Welch.pdf">Resume</a>
+					<a href="assets/resume/Resume-Nicholas-Welch.pdf">Resume</a>
 				</button>
 			</li>
 			<li>
 				<button class="email">
-				<a href="mailto:nwelchr@gmail.com">Email</a>
+					<a href="mailto:nwelchr@gmail.com">Email</a>
 				</button>
 			</li>
 		</ul>
