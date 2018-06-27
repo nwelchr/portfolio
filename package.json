@@ -4,6 +4,7 @@
   "description": "Nick Welch",
   "main": "index.js",
   "dependencies": {
+    "aos": "^2.3.2",
     "node-sass": "^4.9.0"
   },
   "devDependencies": {},
