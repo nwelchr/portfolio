@@ -1255,8 +1255,11 @@ button,
   }
 }
 
+* {
+  animation: fadein 3s ease;
+}
+
 body.is-loading {
-  opacity: 0;
   #header {
     .inner {
       @include vendor('transform', 'scale(1.05)');
