@@ -122,7 +122,34 @@ $viewer-distance: 1200px;
   }
 }
 
-/* end carousel */
+.nav.prev,
+.nav.next {
+  outline: 0;
+}
+
+.logo-img {
+  opacity: .05;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: .5s ease;
+  position: relative;
+  background: transparent;
+}
+
+.pink,
+.orange,
+.yellow,
+.green,
+.blue,
+.purple {
+  transition: .5s ease;
+}
+
+.selected {
+  opacity: 1;
+  transition: .5s ease;
+}
 
 .footer-actions {
   display: flex;
@@ -1229,6 +1256,7 @@ button,
 }
 
 body.is-loading {
+  opacity: 0;
   #header {
     .inner {
       @include vendor('transform', 'scale(1.05)');
