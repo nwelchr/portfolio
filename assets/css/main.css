@@ -3188,7 +3188,7 @@ button,
     top: 0;
     width: 100%; }
 
-* {
+.progress-container {
   animation: fadein 3s ease; }
 
 body.is-loading #header .inner {
